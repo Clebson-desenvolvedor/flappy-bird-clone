@@ -1,18 +1,15 @@
 
-import Phaser from 'Phaser.js';
+import Phaser from 'phaser';
 
 
 class PlayScene extends Phaser.Scene {
-  
-    constructor() {
-        super('PlayScene');
-        this.initalBirdPosition = {
-        x: 80,
-        y: 300
-    }
 
-    this.bird = null;
-  }
+    constructor(config) {
+        super('PlayScene');
+        this.config = config;
+
+        this.bird = null;
+    }
 
   preload() {
     this.load.image('sky', 'assets/sky.png');
@@ -26,7 +23,7 @@ class PlayScene extends Phaser.Scene {
   }
 
   update() {
-    
+
   }
 }
 
